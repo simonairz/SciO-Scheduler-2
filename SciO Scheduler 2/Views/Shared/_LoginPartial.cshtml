@@ -2,9 +2,11 @@
 @inject SignInManager<IdentityUser> SignInManager
 @inject UserManager<IdentityUser> UserManager
 
+
 <ul class="navbar-nav">
 @if (SignInManager.IsSignedIn(User))
 {
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <li class="nav-item">
         <a  class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity?.Name!</a>
     </li>
@@ -21,6 +23,35 @@ else
     </li>
     <li class="nav-item">
         <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Login</a>
+    </li>
+    <li>
+        <head>
+        <meta name="google-signin-scope" content="profile email">
+        <meta name="google-signin-client_id" content="946056851819-2veijqmtri3pcv9iou60fpflaijli2dk.apps.googleusercontent.com">
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+    </head>
+
+    <body>
+        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+        <script>
+            function onSignIn(googleUser) {
+                var profile = googleUser.getBasicProfile();
+                console.log("ID: " + profile.getId());
+                console.log("Full Name: " + profile.getName());
+                console.log("Given Name: " + profile.getGivenName());
+                console.log("Email: " + profile.getEmail());
+
+                var id_token = googleUser.getAutResponse().id_token;
+                console.log("ID Token: " + id_token);
+                alert("Welcome " + profile.getGivenName());
+            }
+        </script>
+
+        <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    </body>
     </li>
 }
 </ul>
