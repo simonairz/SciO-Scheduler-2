@@ -7,14 +7,12 @@
     <title>Document</title>
 
     <style>
-
          div {
           display: flex;
           justify-content: center;
           align-items: center;
      
         }
-
         table{
             border-collapse: collapse;
             border-spacing: 0;
@@ -29,7 +27,6 @@
             padding: 10px 20px;
             border: 1px solid #000;
         }
-
         .center {
           margin-left: auto;
           margin-right: auto;
@@ -45,7 +42,6 @@
 
 
 <script>
-
     function randBlocks(numBlock, max){
         var randomNum = Math.floor(Math.random() * max) + 1;
         return dataBlocks[numBlock-1][randomNum];
@@ -82,10 +78,6 @@
             ["Disease Detectives",       "It's About Time",      "Remote Sensing"           ],
             ["Codebusters",              "Dynamic Planet",       "Ornithology"              ],
             ["Detector Building",        "Green Generation",     "Rocks & Minerals"         ]];
-
-
-
-
         var data = [["Students","BlockA", "BlockB", "BlockC","BlockD","BlockE"] 
     ,["Airam Reinoso","Event1", "Event2", "Event3","Event4","Event5","Event6","Event7","Event8"]
     ,["Airam Reinoso","Event1", "Event2", "Event3","Event4","Event5","Event6","Event7","Event8"]
@@ -93,7 +85,6 @@
     ,["Airam Reinoso","Event1", "Event2", "Event3","Event4","Event5","Event6","Event7","Event8"]
     ,["Airam Reinoso","Event1", "Event2", "Event3","Event4","Event5","Event6","Event7","Event8"]
     ,["Airam Reinoso","Event1", "Event2", "Event3","Event4","Event5","Event6","Event7","Event8"]]
-
     var randomData = [
     ["Students","BlockA", "BlockB", "BlockC","BlockD","BlockE", "BlockF"],
     ["Test Student 1",randBlocks(1),randBlocks(2),randBlocks(3),randBlocks(4),randBlocks(5),randBlocks(6)],
@@ -108,28 +99,29 @@
             randomData[column][row]=;
             console.log(randE);
         }
-
     }*/
     var row = [];
-    for (var r = 0; r<data.length; r++){
+    for (var r = 0; r</*ndomData.length*/100;r++){
         row[r] = document.createElement('tr');
     }
-    for(var iy = 0; iy<7; iy++){
+    for(var iy = 0; iy<40; iy++){
         
         let row_1 = document.createElement('tr');
-        console.log("randomData[1].length-" + randomData[1].length);
-        for(var i = 0; i<data[1].length-2; i++){
+        console.log("randomData[1].length-" + randomData[1].length + "  iy-"+iy);
+        for(var i = 0; i<randomData[1].length; i++){
             let row_1_data_1 = document.createElement('td');
             row_1_data_1.innerHTML = randomData[iy][i];
+            console.log("Table cord(" + i + "," + iy + ")-" + randomData[iy][i]);
             row[iy].appendChild(row_1_data_1);
         }
+        console.log("iy" + iy+"row" + row[iy]);
         thead.appendChild(row[iy]);
     }
-    
+    /*
     row_2.appendChild(row_2_data_1);
     row_2.appendChild(row_2_data_2);
     row_2.appendChild(row_2_data_3);
-    
+    */
 </script>
 </body>
 </html>

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using SciO_Scheduler_2.Models;
 
 namespace SciO_Scheduler_2.Data
 {
@@ -9,5 +10,6 @@ namespace SciO_Scheduler_2.Data
             : base(options)
         {
         }
+        public DbSet<SciO_Scheduler_2.Models.Gantt> Gantt { get; set; }
     }
 }
