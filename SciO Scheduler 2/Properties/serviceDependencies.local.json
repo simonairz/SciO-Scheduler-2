@@ -9,9 +9,15 @@
     },
     "mssql2": {
       "secretStore": "LocalSecretsFile",
-      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/scioscheduler/databases/scioscheduler",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/newscioscheduler/databases/SciOScheduler",
       "type": "mssql.azure",
       "connectionId": "stringConnectionScio"
+    },
+    "mssql3": {
+      "secretStore": "LocalSecretsFile",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/newscioscheduler/databases/SciOScheduler",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:stringConnectionScio"
     }
   }
 }
