@@ -30,6 +30,9 @@ namespace SciO_Scheduler_2.Controllers
         {
             return View();
         }
+        public IActionResult timeTablesController() {
+            return View(); 
+        }
         public IActionResult Gantts()
         {
             return View();

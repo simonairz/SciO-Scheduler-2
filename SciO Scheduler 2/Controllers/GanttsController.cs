@@ -88,7 +88,7 @@ namespace SciO_Scheduler_2.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,studentName,studentLastName,studentEvents,email")] Gantt gantt)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,studentName,studentLastName,studentEventsA,studentEventsB,studentEventsC,studentEventsD,studentEventsE,studentEventsF, studentEventsSelf,email")] Gantt gantt)
         {
             if (id != gantt.Id)
             {

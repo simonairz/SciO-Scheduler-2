@@ -1,0 +1,140 @@
+﻿@model SciO_Scheduler_2.Models.timeTable
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>timeTable</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="venue" class="control-label"></label>
+                <input asp-for="venue" class="form-control" />
+                <span asp-validation-for="venue" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="blockAStartTime" class="control-label"></label>
+                <input asp-for="blockAStartTime" class="form-control" />
+                <span asp-validation-for="blockAStartTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="blockAEndTime" class="control-label"></label>
+                <input asp-for="blockAEndTime" class="form-control" />
+                <span asp-validation-for="blockAEndTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="blockBStartTime" class="control-label"></label>
+                <input asp-for="blockBStartTime" class="form-control" />
+                <span asp-validation-for="blockBStartTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="blockBEndTime" class="control-label"></label>
+                <input asp-for="blockBEndTime" class="form-control" />
+                <span asp-validation-for="blockBEndTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="blockCStartTime" class="control-label"></label>
+                <input asp-for="blockCStartTime" class="form-control" />
+                <span asp-validation-for="blockCStartTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="blockCEndTime" class="control-label"></label>
+                <input asp-for="blockCEndTime" class="form-control" />
+                <span asp-validation-for="blockCEndTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="blockDStartTime" class="control-label"></label>
+                <input asp-for="blockDStartTime" class="form-control" />
+                <span asp-validation-for="blockDStartTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="blockDEndTime" class="control-label"></label>
+                <input asp-for="blockDEndTime" class="form-control" />
+                <span asp-validation-for="blockDEndTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="blockEStartTime" class="control-label"></label>
+                <input asp-for="blockEStartTime" class="form-control" />
+                <span asp-validation-for="blockEStartTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="blockEEndTime" class="control-label"></label>
+                <input asp-for="blockEEndTime" class="form-control" />
+                <span asp-validation-for="blockEEndTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="blockFStartTime" class="control-label"></label>
+                <input asp-for="blockFStartTime" class="form-control" />
+                <span asp-validation-for="blockFStartTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="blockFEndTime" class="control-label"></label>
+                <input asp-for="blockFEndTime" class="form-control" />
+                <span asp-validation-for="blockFEndTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="bridgesStartTime" class="control-label"></label>
+                <input asp-for="bridgesStartTime" class="form-control" />
+                <span asp-validation-for="bridgesStartTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="bridgesEndTime" class="control-label"></label>
+                <input asp-for="bridgesEndTime" class="form-control" />
+                <span asp-validation-for="bridgesEndTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="gravityVehicleStartTime" class="control-label"></label>
+                <input asp-for="gravityVehicleStartTime" class="form-control" />
+                <span asp-validation-for="gravityVehicleStartTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="gravityVehicleEndTime" class="control-label"></label>
+                <input asp-for="gravityVehicleEndTime" class="form-control" />
+                <span asp-validation-for="gravityVehicleEndTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="pingPongParachuteStartTime" class="control-label"></label>
+                <input asp-for="pingPongParachuteStartTime" class="form-control" />
+                <span asp-validation-for="pingPongParachuteStartTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="pingPongParachuteEndTime" class="control-label"></label>
+                <input asp-for="pingPongParachuteEndTime" class="form-control" />
+                <span asp-validation-for="pingPongParachuteEndTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="trajectoryStartTime" class="control-label"></label>
+                <input asp-for="trajectoryStartTime" class="form-control" />
+                <span asp-validation-for="trajectoryStartTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="trajectoryEndTime" class="control-label"></label>
+                <input asp-for="trajectoryEndTime" class="form-control" />
+                <span asp-validation-for="trajectoryEndTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="wrightStuffStartTime" class="control-label"></label>
+                <input asp-for="wrightStuffStartTime" class="form-control" />
+                <span asp-validation-for="wrightStuffStartTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="wrightStuffEndTime" class="control-label"></label>
+                <input asp-for="wrightStuffEndTime" class="form-control" />
+                <span asp-validation-for="wrightStuffEndTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

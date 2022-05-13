@@ -13,13 +13,40 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.studentName)
+                Name
+                @*@Html.DisplayNameFor(model => model.studentName)-->*@
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.studentLastName)
+                Last Name
+                @*@Html.DisplayNameFor(model => model.studentLastName)*@
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.studentEvents)
+                Block A
+                @*@Html.DisplayNameFor(model => model.studentEventsA)*@
+            </th>
+            <th>
+                Block B
+                @*@Html.DisplayNameFor(model => model.studentEventsB)*@
+            </th>
+            <th>
+                Block C
+                @*@Html.DisplayNameFor(model => model.studentEventsC)*@
+            </th>
+            <th>
+                Block D
+                @*@Html.DisplayNameFor(model => model.studentEventsD)*@
+            </th>
+            <th>
+                Block E
+                @*@Html.DisplayNameFor(model => model.studentEventsD)*@
+            </th>
+            <th>
+                Block F
+                @*@Html.DisplayNameFor(model => model.studentEventsF)*@
+            </th>
+            <th>
+                Block Self
+                @*@Html.DisplayNameFor(model => model.studentEventsSelf)*@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.email)
@@ -39,7 +66,25 @@
                 @Html.DisplayFor(modelItem => item.studentLastName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.studentEvents)
+                @Html.DisplayFor(modelItem => item.studentEventsA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.studentEventsB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.studentEventsC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.studentEventsD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.studentEventsE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.studentEventsF)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.studentEventsSelf)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.email)

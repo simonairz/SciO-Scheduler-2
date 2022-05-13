@@ -1,9 +1,22 @@
 ﻿
 @{
+
     ViewData["Title"] = "MyChart";
+    @*using (var context = new BloggingContext())
+{
+    var blogs = context.Blogs.ToList();
+}
+    var user = new SqlParameter("user", "Simon");
+
+    var gantt = context.Gantt
+    .FromSqlRaw("EXECUTE dbo.gantt @filterByUser=@studentName", user)
+    .ToList();
+    *@
+
 }
 
 <h1>MyChart</h1>
+<h1>@gantt</h1>
 <div id="anychart-embed-prC8mRKX" class="anychart-embed anychart-embed-prC8mRKX">
 <script src="https://cdn.anychart.com/releases/8.3.0/js/anychart-base.min.js"></script>
 <script src="https://cdn.anychart.com/releases/8.3.0/js/anychart-ui.min.js"></script>
@@ -112,5 +125,9 @@ anychart.onDocumentReady(function () {
         chart.zoomTo(1191168000000, 1201795200000);
     });
 });
+</script>
+
+<script>
+
 </script>
 </div>

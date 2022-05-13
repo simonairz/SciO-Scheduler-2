@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SciO_Scheduler_2.Data;
 
@@ -11,13 +12,14 @@ using SciO_Scheduler_2.Data;
 namespace SciO_Scheduler_2.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220323163943_allEvents")]
+    partial class allEvents
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.3")
+                .HasAnnotation("ProductVersion", "6.0.2")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
@@ -275,82 +277,6 @@ namespace SciO_Scheduler_2.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Gantt");
-                });
-
-            modelBuilder.Entity("SciO_Scheduler_2.Models.timeTable", b =>
-                {
-                    b.Property<string>("venue")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<DateTime>("blockAEndTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("blockAStartTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("blockBEndTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("blockBStartTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("blockCEndTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("blockCStartTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("blockDEndTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("blockDStartTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("blockEEndTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("blockEStartTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("blockFEndTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("blockFStartTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("bridgesEndTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("bridgesStartTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("gravityVehicleEndTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("gravityVehicleStartTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("pingPongParachuteEndTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("pingPongParachuteStartTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("trajectoryEndTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("trajectoryStartTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("wrightStuffEndTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("wrightStuffStartTime")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("venue");
-
-                    b.ToTable("timeTable");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

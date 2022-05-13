@@ -1,0 +1,227 @@
+﻿@model IEnumerable<SciO_Scheduler_2.Models.timeTable>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table" style="  border-left-width:1px;  border-right-width:1px; border-color:Black">
+    <thead>
+        <tr>
+            <th>
+                Block A Start
+                @*
+                @Html.DisplayNameFor(model => model.blockAStartTime)
+                *@
+            </th>
+            <th>
+                Block A End
+                @*
+                @Html.DisplayNameFor(model => model.blockAEndTime)
+                *@
+            </th>
+            <th>
+                Block B Start
+                @*
+                @Html.DisplayNameFor(model => model.blockBStartTime)
+                *@
+            </th>
+            <th>
+                Block B End
+                @*
+                @Html.DisplayNameFor(model => model.blockBEndTime)
+                *@
+            </th>
+            <th>
+                Block C Start
+                @*
+                @Html.DisplayNameFor(model => model.blockCStartTime)
+                *@
+            </th>
+            <th>
+                Block C End
+                @*
+                @Html.DisplayNameFor(model => model.blockCEndTime)
+                *@
+            </th>
+            <th>
+                Block D Start
+                @*
+                @Html.DisplayNameFor(model => model.blockDStartTime)
+                *@
+            </th>
+            <th>
+                Block D End
+                @*
+                @Html.DisplayNameFor(model => model.blockDEndTime)
+                *@
+            </th>
+            <th>
+                Block E Start
+                @*
+                @Html.DisplayNameFor(model => model.blockEStartTime)
+                *@
+            </th>
+            <th>
+                Block E End
+                @*
+                @Html.DisplayNameFor(model => model.blockEEndTime)
+                *@
+            </th>
+            <th>
+                Block F Start
+                @*
+                @Html.DisplayNameFor(model => model.blockFStartTime)
+                *@
+            </th>
+            <th>
+                Block F End
+                @*
+                @Html.DisplayNameFor(model => model.blockFEndTime)
+                *@
+            </th>
+            <th>
+                Bridge Start
+                @*
+                @Html.DisplayNameFor(model => model.bridgesStartTime)
+                *@
+            </th>
+            <th>
+                Bridge End
+                @*
+                @Html.DisplayNameFor(model => model.bridgesEndTime)
+                *@
+            </th>
+            <th>
+                Gravity Vehicle Start
+                @*
+                @Html.DisplayNameFor(model => model.gravityVehicleStartTime)
+                *@
+            </th>
+            <th>
+                Gravity Vehicle End
+                @*
+                @Html.DisplayNameFor(model => model.gravityVehicleEndTime)
+                *@
+            </th>
+            <th>
+                Ping Pong Start
+                @*
+                @Html.DisplayNameFor(model => model.pingPongParachuteStartTime)
+                *@
+            </th>
+            <th>
+                Ping Pong End
+                @*
+                @Html.DisplayNameFor(model => model.pingPongParachuteEndTime)
+                *@
+            </th>
+            <th>
+                Trajectory Start
+                @*
+                @Html.DisplayNameFor(model => model.trajectoryStartTime)
+                *@
+            </th>
+            <th>
+                Trajectory End
+                @*
+                @Html.DisplayNameFor(model => model.trajectoryEndTime)
+                *@
+            </th>
+            <th>
+                Wright Stuff Start
+                @*
+                @Html.DisplayNameFor(model => model.wrightStuffStartTime)
+                *@
+            </th>
+            <th>
+                Wright Stuff End
+                @*
+                @Html.DisplayNameFor(model => model.wrightStuffEndTime)
+                *@
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.blockAStartTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.blockAEndTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.blockBStartTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.blockBEndTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.blockCStartTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.blockCEndTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.blockDStartTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.blockDEndTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.blockEStartTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.blockEEndTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.blockFStartTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.blockFEndTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bridgesStartTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bridgesEndTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.gravityVehicleStartTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.gravityVehicleEndTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pingPongParachuteStartTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pingPongParachuteEndTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.trajectoryStartTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.trajectoryEndTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.wrightStuffStartTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.wrightStuffEndTime)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.venue">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.venue">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.venue">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -11,5 +11,6 @@ namespace SciO_Scheduler_2.Data
         {
         }
         public DbSet<SciO_Scheduler_2.Models.Gantt> Gantt { get; set; }
+        public DbSet<SciO_Scheduler_2.Models.timeTable> timeTable { get; set; }
     }
 }
